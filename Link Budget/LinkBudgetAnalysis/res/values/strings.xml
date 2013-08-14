@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="app_name">Link Budget Analysis</string>
+    <string name="menu_settings">Settings</string>
+
+    <color name="black">#000000</color>
+    <color name="blue">#00008b</color>
+	<color name="lightsteelblue"> #b0c4de</color>
+    <string name="tv1">Transmit Antenna Gain (Gt)(dB)</string>
+    <string name="tvFont">Courier</string>
+
+    <style name="tvFont" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">#ffffe0</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="spinnerTxtColor" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">#ffffe0</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="DropDownTextColor" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+         <item name="android:textColor">#F00</item>
+    </style>
+    
+   
+    
+
+    <string name="etTxAntGain">Transmit Antenna Gain(Gt)</string>
+
+    <color name="white">#ffffe0</color>
+
+    <string name="tv2">Median Path Loss(dB)</string>
+    <string name="tv2_1">Carrier Frequency(MHz)</string>
+    <string name="tv2_2">Transmit Antenna Height(m)</string>
+    <string name="tv2_3">Receive Antenna Height(m)</string>
+    <string name="tv2_4">Distance from Transmit antenna(km)</string>
+    <string name="rbOption1">Small or Medium City</string>
+    <string name="rbOption2">Large City</string>
+    <string name="tv3">Margin Calculation</string>
+    <string name="tv3_1">Reliability Factor</string>
+    <string name="tv3_2">Deviation</string>
+    <string name="tv4">Receive/Mobile Antenna Gain(Gr)(dB)</string>
+    <string name="etRxAntGain">Receive Antenna Gain</string>
+    <string name="tv5">Cabling Losses(dB)</string>
+    <string name="etCableLoss">Cabling Losses</string>
+    <string name="tv6">Receiver Noise Computation(dB)</string>
+    <string name="tvMedPathLoss">Median Path Loss</string>
+    <string name="etRxNoise">Receiver Noise</string>
+    <string name="tv7">Required SNR(dB)</string>
+    <string name="tv6_1">Boltzmanns Constant</string>
+    <string name="tv6_2">Temperature(K)</string>
+    <string name="tv6_3">Bandwidth(dB)</string>
+    <string name="tv6_4">Noise Figure(dB)</string>
+    <string name="tvReqSNR">Required SNR</string>
+
+    <string-array name="modulation">
+        <item>BPSK</item>
+        <item>QPSK/4QAM</item>
+        <item>8PSK</item>
+        <item>16PSK</item>
+        <item>BFSK</item>
+        <item>16QAM</item>
+    </string-array>
+
+    <string name="tv7_1">Bit-error Ratio</string>
+    <string name="tv8">Transmit power required in the system(dB)</string>
+    <string name="etReqTxPower">Required tranmit power</string>
+    <string name="etCarrFreq">Carrier Frequency</string>
+    <string name="etRxAntHt">Receive Antenna Height</string>
+    <string name="etTxAntHt">Transmit Antenna Height</string>
+    <string name="tvMarginCalc">Margin Calculation</string>
+    <string name="etRelFactor">Reliability Factor</string>
+    <string name="etDeviation">Deviation</string>
+    <string name="tvRxNoiseCalc">Receiver Noise</string>
+    <string name="etTemp">Temperature</string>
+    <string name="etBandwidth">Bandwidth</string>
+    <string name="etNoiseFig">Noise Figure</string>
+    <string name="etBER">Bit Error Rate</string>
+    <string name="modulation">Modulation</string>
+    <string name="etConstant">Constant</string>
+    <string name="etDistance">Distance in km</string>
+    <string name="tv7_2">Modulation</string>
+    <string name="bLBA">Compute Link Budget</string>
+    <string name="bInfo">More Info</string>
+    <string name="bAbout">About Link Budget Analysis</string>
+
+    <color name="khaki">#bdb76b</color>
+    <string name="bWebHelp">Help</string>
+
+</resources>

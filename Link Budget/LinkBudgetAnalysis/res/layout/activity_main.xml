@@ -1,0 +1,749 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        tools:context=".MainActivity" >
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv1"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tv1"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/etTxAntGain"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/etTxAntGain"
+                android:inputType="numberDecimal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll1"
+            android:background="@color/blue" />
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/view1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv2"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:text="@string/tv2"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvMedPathLoss"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/tvMedPathLoss"
+                
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll2"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv2_1"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="@string/tv2_1"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etCarrFreq"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/etCarrFreq"
+                android:inputType="numberDecimal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2_3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll2_2"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv2_3"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="@string/tv2_3"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etRxAntHt"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/etRxAntHt"
+                android:inputType="numberDecimal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2_4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll2_3"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv2_4"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="@string/tv2_4"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etDistance"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/etDistance"
+                android:inputType="numberDecimal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2_5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll2_4"
+            android:orientation="horizontal" >
+
+            <RadioGroup
+                android:id="@+id/rgCitySize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxHeight="12sp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rbOption1"
+                    style="@style/tvFont"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/rbOption1"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/rbOption2"
+                    style="@style/tvFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rbOption2"
+                    android:textSize="12sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll2_5"
+            android:background="@color/blue" />
+
+        <LinearLayout
+            android:id="@+id/ll2_2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll2_1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv2_2"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="@string/tv2_2"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etTxAntHt"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/etTxAntHt"
+                android:inputType="numberDecimal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/view2"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv3"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="@string/tv3"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvMarginCalc"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/tvMarginCalc"
+               
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll3_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll3"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv3_1"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="@string/tv3_1"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etRelFactor"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/etRelFactor"
+                android:inputType="numberDecimal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll3_2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll3_1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv3_2"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="@string/tv3_2"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etDeviation"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/etDeviation"
+                android:inputType="numberDecimal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll3_2"
+            android:background="@color/blue" />
+
+        <LinearLayout
+            android:id="@+id/ll4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/view3"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv4"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="@string/tv4"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etRxAntGain"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/etRxAntGain"
+                android:inputType="numberDecimal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll4"
+            android:background="@color/blue" />
+
+        <LinearLayout
+            android:id="@+id/ll5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/view4"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv5"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="@string/tv5"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etCableLoss"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/etCableLoss"
+                android:inputType="numberDecimal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll5"
+            android:background="@color/blue" />
+
+        <LinearLayout
+            android:id="@+id/ll6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/view5"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv6"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="@string/tv6"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvRxNoiseCalc"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/tvRxNoiseCalc"
+                
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll6_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll6"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv6_1"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="@string/tv6_1"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etConstant"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/etConstant"
+                android:inputType="numberDecimal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll6_2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll6_1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv6_2"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="@string/tv6_2"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etTemp"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/etTemp"
+                android:inputType="numberDecimal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll6_3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll6_2"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv6_3"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="@string/tv6_3"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etBandwidth"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/etBandwidth"
+                android:inputType="numberDecimal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll6_4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll6_3"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv6_4"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="@string/tv6_4"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etNoiseFig"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/etNoiseFig"
+                android:inputType="numberDecimal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll6_4"
+            android:background="@color/blue" />
+
+        <LinearLayout
+            android:id="@+id/ll7"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/view6"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv7"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="@string/tv7"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvReqSNR"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/tvReqSNR"
+                
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll7_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll7"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv7_1"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="@string/tv7_1"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etBER"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/etBER"
+                android:inputType="numberDecimal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll7_2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll7_1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv7_2"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="@string/tv7_2"
+                android:textSize="12sp" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:background="@color/lightsteelblue"
+                android:entries="@array/modulation"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll8"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/view7"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv8"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="@string/tv8"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etReqTxPower"
+                style="@style/tvFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0.85"
+                android:ems="5"
+                android:hint="@string/etReqTxPower"
+                android:inputType="numberDecimal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll7"
+            android:layout_marginTop="69dp"
+            android:background="@color/blue" />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll8"
+            android:background="@color/blue" />
+
+        <Button
+            android:id="@+id/bLBA"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view8"
+            android:background="@color/lightsteelblue"
+            android:gravity="center"
+            android:text="@string/bLBA"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/bInfo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bLBA"
+            android:background="@color/lightsteelblue"
+            android:gravity="center"
+            android:text="@string/bInfo"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+</ScrollView>
